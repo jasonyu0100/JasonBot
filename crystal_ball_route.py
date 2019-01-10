@@ -1,7 +1,7 @@
 from flask_app import app
 import random
 
-@app.route('/crystal',['GET','POST'])
+@app.route('/crystal',methods=['GET','POST'])
 def crystal_ball():
     if random.random() > 0.8:
         return "You are a lucky individual"
