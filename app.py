@@ -8,12 +8,12 @@ def hello_world():
 
 @app.route('/greet')
 def greet():
-    name = request.values.get('name')
+    name = request.values.get('text')
     return f"Hello {name}!"
 
 @app.route('/weather')
 def weather():
-    temp = int(request.values.get('temp'))
+    temp = int(request.values.get('text'))
     if temp > 30:
         return f"Ooo that's hot. That's hot"
     else:
