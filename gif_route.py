@@ -1,5 +1,5 @@
 from flask_app import app
-from flask import request
+from flask import request, jsonify
 import requests
 import json
 
@@ -13,12 +13,9 @@ def gif():
         'api_key':API_KEY,
         'q':name,
     })
-    gif_url = response.json()['data'][0]['images']['original']['url']
-
-    return {
-        "text": "Here is a cool GIF!",
-        "attachments": [
-            {"image_url": gif_url}
-        ]
-    }
+    
+    gif_url = response.json()['data'][0]['images']['original']['url'] #string of url 
+    
+    return_dict = {'text':'Here is your GIF!','attatchments':[{"image_url": gif_url}]}
+    return jsonify(return_dict)
 

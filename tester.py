@@ -10,4 +10,4 @@ response = requests.get(URL,params={
     'q':'cat',
 })
 
-print(json.dumps(response.json()['data'][0]['images']['original']['url'],indent="  "))
+print(type(json.dumps(response.json()['data'][0]['images']['original']['url'],indent="  ")))
