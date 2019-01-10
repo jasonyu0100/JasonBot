@@ -14,11 +14,11 @@ def gif():
         'q':name,
     })
     gif_url = response.json()['data'][0]['images']['original']['url']
+
     return {
         "text": "Here is a cool GIF!",
         "attachments": [
             {"image_url": gif_url}
         ]
     }
-}
 
