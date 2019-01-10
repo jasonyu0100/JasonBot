@@ -2,16 +2,16 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def hello_world():
     return "Hello World"
 
-@app.route('/greet')
+@app.route('/greet', methods=['GET','POST'])
 def greet():
     name = request.values.get('text')
     return f"Hello {name}!"
 
-@app.route('/weather')
+@app.route('/weather', methods=['GET','POST'])
 def weather():
     temp = int(request.values.get('text'))
     if temp > 30:
