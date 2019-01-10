@@ -1,4 +1,5 @@
 from flask_app import app
+from flask import request
 
 @app.route('/weather', methods=['GET','POST'])
 def weather():
