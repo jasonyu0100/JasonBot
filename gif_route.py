@@ -1,7 +1,6 @@
 from flask_app import app
 from flask import request, jsonify
 import requests
-import json
 
 API_KEY = 'g1ubfI32am1y2bDQJxvWzf2xYR30CLMk'
 URL = 'https://api.giphy.com/v1/gifs/search'
