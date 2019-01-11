@@ -15,6 +15,6 @@ def gif():
     
     gif_url = response.json()['data'][0]['images']['original']['url'] #string of url 
     
-    return_dict = jsonify({'text':'Here is your GIF!','attatchments':[{"image_url": gif_url}]})
+    return_dict = jsonify({'text':'Here is your GIF!','attachments':[{"image_url": gif_url}]})
     return return_dict
 
